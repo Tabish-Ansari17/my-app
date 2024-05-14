@@ -1,0 +1,53 @@
+   <div class="container">
+    <h2>Sum of 2 Digit</h2>
+      
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Enter first digit</label>
+          <input type="number" class="form-control" id="exampleInputEmail1" formControlName="num1">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Enter second digit</label>
+          <input type="number" class="form-control" id="exampleInputPassword1" formControlName="num2">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Add Value</button>
+      </form>
+      
+   </div>
+
+
+<!-- 
+
+   <form [formGroup]="userForm" >
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="name" class="form-control" id="exampleInputEmail1" formControlName="name">
+  
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="number" class="form-control" id="exampleInputPassword1" formControlName="phoneNo">
+      
+    </div>
+
+    <button type="submit" class="btn btn-primary" >Submit</button>
+  </form> -->
+
+
+    <textarea class="form-control" placeholder="Leave a comment here" [(ngModel)]="text" id="floatingTextarea2" style="height: 100px"></textarea>
+
+  
+<button class="btn btn-primary" (click)="textformat()">Change to UpperCase</button>
+
+
+
+
+
+<form [formGroup]="imageForm" (ngSubmit)="imageSubmit()">
+  <div class="mb-3">
+    <label for="formFile" class="form-label">Default file input example</label>
+    <input class="form-control" type="file" id="formFile" formControlName="image">
+  </div>
+  <button type="submit" class="btn btn-primary">Upload IMage</button>
+</form>
